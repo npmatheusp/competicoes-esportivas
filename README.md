@@ -9,7 +9,7 @@ Este projeto é composto por um sistema completo com Frontend e Backend para ger
 ## 📊 Modelagem do Banco de Dados (MySQL)
 Abaixo está o diagrama do banco de dados gerado no MySQL Workbench:
 
-![Esquema do Banco de Dados](backend/sql/esquema-banco.png)
+![Esquema do Banco de Dados](backend/src/sql/esquema-banco.png)
 
 ## 🚀 Como rodar o projeto
 1. Clone o repositório.
