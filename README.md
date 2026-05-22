@@ -1,10 +1,17 @@
-# Backend - Competições Esportivas
+# Projeto Competições Esportivas
 
-Este é o servidor do projeto, responsável pela API e conexão com o banco de dados.
+Este projeto é composto por um sistema completo com Frontend e Backend para gerenciamento de competições esportivas.
 
-## 🛠️ Tecnologias Utilizadas
-* Node.js / Express (ou a linguagem/framework que você usou)
-* MySQL (Banco de Dados)
+## 🏗️ Estrutura do Projeto
+* `/frontend`: Interface do usuário.
+* `/backend`: API, regras de negócio e banco de dados.
 
-## 🗄️ Banco de Dados
-O script para criação do banco de dados e a imagem do esquema estão salvos na pasta `backend/database/`.
+## 📊 Modelagem do Banco de Dados (MySQL)
+Abaixo está o diagrama do banco de dados gerado no MySQL Workbench:
+
+![Esquema do Banco de Dados](backend/sql/esquema-banco.png)
+
+## 🚀 Como rodar o projeto
+1. Clone o repositório.
+2. Importe o arquivo `banco.sql` no seu MySQL.
+3. Instale as dependências no front e no back...
