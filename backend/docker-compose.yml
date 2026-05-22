@@ -1,0 +1,40 @@
+services:
+  app:
+    build: .
+    container_name: competicoes_esportivas
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: esportes_user
+      DB_PASSWORD: root
+      DB_NAME: competicoes_esportivas
+      PORT: 3000
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: inscricoes-esportivas-db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: inscricoes_esportivas
+      MYSQL_USER: esportes_user
+      MYSQL_PASSWORD: root
+    ports:
+      - "3307:3306"
+    volumes:
+      - inscricoes_esportivas_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  inscricoes_esportivas_data:
